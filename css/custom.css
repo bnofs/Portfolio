@@ -1,0 +1,50 @@
+a {
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+}
+.active{
+    background-color: rgb(231, 231, 231);
+}
+
+.resume img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.ticker{
+    float: left;
+    font-size: 20px;
+}
+hr {
+    margin:0;
+}
+.watchlist-item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.watchlist-item:hover{
+    background-color: rgb(71, 71, 71);
+    color: white;
+}
+
+.price{
+    float: right;
+    font-size: 18px;
+}
+
+.w3-third{
+    width:30%;
+    position:fixed;
+    right: 7px;
+    top: 10px;
+}
+.w3-twothird{
+    width:70%;
+}
+.title{
+    text-align: center;
+}
