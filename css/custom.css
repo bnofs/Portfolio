@@ -8,6 +8,21 @@ a:hover{
     background-color: rgb(231, 231, 231);
 }
 
+.header{
+    position:fixed;
+    top: 0px;
+    right: 20px;
+    width: 20%;
+}
+.header p{
+    text-align: right;
+    font-size: 24px;
+}
+.header img{
+    width: 15%;
+}
+
+
 .resume img{
     display: block;
     margin-left: auto;
@@ -39,7 +54,7 @@ hr {
     width:30%;
     position:fixed;
     right: 7px;
-    top: 10px;
+    top: 103px;
 }
 .w3-twothird{
     width:70%;
