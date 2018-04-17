@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/custom.css">
 <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <style>
   html,
@@ -65,8 +66,7 @@
           <h2 class="w3-text-grey w3-padding-16">
             </i>Watchlist</h2>
 
-          <a href="leadership.html">
-            <div class="w3-container watchlist-item">
+            <div class="w3-container watchlist-item" id="leadership">
 
               <span class="w3-opacity ticker">
                 <b>LEAD</b>
@@ -74,7 +74,6 @@
               <span class="price">10.67</span>
 
             </div>
-          </a>
 
           <hr>
           <a href="resume.html">
@@ -117,27 +116,19 @@
                       <span class="price">10.67</span>
                     </div>
                     <br>
+                    </a>
         </div>
 
         <!-- End Right Column -->
       </div>
 
+      
       <!-- End Grid -->
     </div>
-
-    <div class="w3-twothird">
-      <h2 class="title">Historical Data</h2>
-      <h2></h2>
-      <h2></h2>
-      <h2></h2>
-      <h2></h2>
-      <h2></h2>
-      <video src="<h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        "></video>
+    <div id="content">
+        <h1>Test</h1>
     </div>
+    
 
     <!-- End Page Container -->
   </div>
@@ -147,3 +138,12 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+  var leadership = document.getElementById('leadership');
+  leadership.style.cursor = 'pointer';
+  leadership.onclick = function(){
+    $('#content').load('ajax/leadership.html #container');
+  }
+  
+</script>
