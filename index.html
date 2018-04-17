@@ -37,10 +37,9 @@
       <!-- Left Column -->
       <div class="w3-twothird">
 
-        <h2 class="w3-text-grey">Brendan Nofs Portfolio</h2>
-
+        <h2> </h2>
         <br>
-        <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-white w3-text-grey w3-card-4 content">
           <div class="w3-container">
             <img width="100%" src="images/candlestick.svg">
           </div>
@@ -55,80 +54,68 @@
       <div class="w3-third">
 
         <a href="index.html">
-        <div class="header">
-          <p class="w3-text-grey">Nofs Portfolio
-            <img class="logo" src="images/anchor.png">
-          </p>
-        </div>
+          <div class="header">
+              <h2 class="w3-text-grey">Brendan Nofs Portfolio</h2>
+          </div>
         </a>
 
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16">
             </i>Watchlist</h2>
 
-            <div class="w3-container watchlist-item" id="leadership">
-
-              <span class="w3-opacity ticker">
-                <b>LEAD</b>
-              </span>
-              <span class="price">10.67</span>
-
-            </div>
-
+          <div class="w3-container watchlist-item" id="leadership">
+            <span class="w3-opacity ticker">
+              <b>LEAD</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
           <hr>
-          <a href="resume.html">
-            <div class="w3-container watchlist-item">
-              <span class="w3-opacity ticker">
-                <b>RES</b>
-              </span>
-              <span class="price">10.67</span>
-            </div>
-            <hr>
-            <a href="manifesto.html">
-              <div class="w3-container watchlist-item">
-                <span class="w3-opacity ticker">
-                  <b>MAN</b>
-                </span>
-                <span class="price">10.67</span>
-              </div>
-              <hr>
-              <a href="elevator-image.html">
-                <div class="w3-container watchlist-item">
-                  <span class="w3-opacity ticker">
-                    <b>ELVR</b>
-                  </span>
-                  <span class="price">10.67</span>
-                </div>
-                <hr>
-                <a href="mmg.html">
-                  <div class="w3-container watchlist-item">
-                    <span class="w3-opacity ticker">
-                      <b>MMG</b>
-                    </span>
-                    <span class="price">10.67</span>
-                  </div>
-                  <hr>
-                  <a href="meeting-times.html">
-                    <div class="w3-container watchlist-item">
-                      <span class="w3-opacity ticker">
-                        <b>MEET</b>
-                      </span>
-                      <span class="price">10.67</span>
-                    </div>
-                    <br>
-                    </a>
+
+          <div class="w3-container watchlist-item" id="resume">
+            <span class="w3-opacity ticker">
+              <b>RES</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
+          <hr>
+
+          <div class="w3-container watchlist-item" id="manifesto">
+            <span class="w3-opacity ticker">
+              <b>MAN</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
+          <hr>
+          <div class="w3-container watchlist-item" id="elevator">
+            <span class="w3-opacity ticker">
+              <b>ELVR</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
+          <hr>
+          <div class="w3-container watchlist-item" id="mmg">
+            <span class="w3-opacity ticker">
+              <b>MMG</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
+          <hr>
+          <div class="w3-container watchlist-item" id="meetingtimes">
+            <span class="w3-opacity ticker">
+              <b>MEET</b>
+            </span>
+            <span class="price">10.67</span>
+          </div>
+          <br>
         </div>
 
         <!-- End Right Column -->
       </div>
 
-      
+
       <!-- End Grid -->
     </div>
-    <div id="content">
-        <h1>Test</h1>
-    </div>
-    
+
 
     <!-- End Page Container -->
   </div>
@@ -141,9 +128,72 @@
 
 <script type="text/javascript">
   var leadership = document.getElementById('leadership');
+  var resume = document.getElementById('resume');
+  var manifesto = document.getElementById('manifesto');
+  var elevator = document.getElementById('elevator');
+  var mmg = document.getElementById('mmg');
+  var meetingtimes = document.getElementById('meetingtimes');
+
   leadership.style.cursor = 'pointer';
-  leadership.onclick = function(){
-    $('#content').load('ajax/leadership.html #container');
+  resume.style.cursor = 'pointer';
+  manifesto.style.cursor = 'pointer';
+  elevator.style.cursor = 'pointer';
+  mmg.style.cursor = 'pointer';
+  meetingtimes.style.cursor = 'pointer';
+
+  leadership.onclick = function () {
+    $('#content').load('ajax/leadership.html');
+    leadership.classList.add('active');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
   }
-  
+  resume.onclick = function () {
+    $('#content').load('ajax/resume.html');
+    leadership.classList.remove('active');
+    resume.classList.add('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  manifesto.onclick = function () {
+    $('#content').load('ajax/manifesto.html');
+    leadership.classList.remove('active');
+    resume.classList.remove('active');
+    manifesto.classList.add('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  elevator.onclick = function () {
+    $('#content').load('ajax/elevator-image.html');
+    leadership.classList.remove('active');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.add('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  mmg.onclick = function () {
+    $('#content').load('ajax/mmg.html');
+    leadership.classList.remove('active');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.add('active');
+    meetingtimes.classList.remove('active');
+  }
+  meetingtimes.onclick = function () {
+    $('#content').load('ajax/meeting-times.html');
+    leadership.classList.remove('active');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.add('active');
+  }
+
 </script>

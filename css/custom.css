@@ -4,6 +4,7 @@ a {
 a:hover{
     color:black;
 }
+
 .active{
     background-color: rgb(231, 231, 231);
 }
@@ -11,8 +12,8 @@ a:hover{
 .header{
     position:fixed;
     top: 0px;
-    right: 20px;
-    width: 20%;
+    right: 0px;
+    width: 27%;
 }
 .header p{
     text-align: right;
@@ -58,6 +59,7 @@ hr {
 }
 .w3-twothird{
     width:70%;
+    
 }
 .title{
     text-align: center;
