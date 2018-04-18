@@ -36,32 +36,6 @@
 
       <!-- Left Column -->
       <div class="content">
-        <div class="w3-content w3-margin-top" style="max-width:1400px;">
-          <div class="w3-row-padding">
-            <div class="w3-twothird">
-              <h2 class="w3-text-grey">Leadership</h2>
-              <br>
-              <div class="w3-white w3-text-grey w3-card-4">
-                <div class="w3-container">
-                  <img width="100%" src="images/candlestick.svg">
-                </div>
-              </div>
-              <br>
-            </div>
-          </div>
-
-          <div class="resume w3-twothird w3-row-padding">
-            <h2 class="title">Historical Data</h2>
-            <h3>Personal Best</h3>
-            <h3>Personal Vision</h3>
-            <h3>Personal Development Plan</h3>
-            <h3>Personal Core Values</h3>
-            <h3>Box Assignment</h3>
-
-          </div>
-
-          <!-- End Page Container -->
-        </div>
         <!-- End Left Column -->
       </div>
 
@@ -158,6 +132,10 @@
   elevator.style.cursor = 'pointer';
   mmg.style.cursor = 'pointer';
   meetingtimes.style.cursor = 'pointer';
+
+  window.onload = function(){
+    $('#content').load('ajax/leadership.html');
+  }
 
   leadership.onclick = function () {
     $('#content').load('ajax/leadership.html');
