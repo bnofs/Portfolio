@@ -8,6 +8,9 @@ a:hover{
 .active{
     background-color: rgb(231, 231, 231);
 }
+.frame {
+    margin: auto;
+}
 
 .header{
     position:fixed;
