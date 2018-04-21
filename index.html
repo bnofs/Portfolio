@@ -50,52 +50,16 @@
 
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16">
-            </i>Watchlist</h2>
+            Watchlist</h2>
 
-          <div class="w3-container watchlist-item active" id="leadership">
-            <span class="w3-opacity ticker">
-              <b>LEAD</b>
-            </span>
-            <span class="price">$ 40.12</span>
-          </div>
-          <hr>
+          <div class="w3-half w3-center watchlist-item" id="leadership">Leadership</div>
+          <div class="w3-half w3-center watchlist-item" id="other">Other</div>
+          <br><br>
 
-          <div class="w3-container watchlist-item" id="resume">
-            <span class="w3-opacity ticker">
-              <b>RES</b>
-            </span>
-            <span class="price">$ 31.98</span>
-          </div>
-          <hr>
+          <div id="right-column">
 
-          <div class="w3-container watchlist-item" id="manifesto">
-            <span class="w3-opacity ticker">
-              <b>MAN</b>
-            </span>
-            <span class="price">$ 18.29</span>
           </div>
-          <hr>
-          <div class="w3-container watchlist-item" id="elevator">
-            <span class="w3-opacity ticker">
-              <b>ELVR</b>
-            </span>
-            <span class="price">$ 60.52</span>
-          </div>
-          <hr>
-          <div class="w3-container watchlist-item" id="mmg">
-            <span class="w3-opacity ticker">
-              <b>MMG</b>
-            </span>
-            <span class="price">$ 47.71</span>
-          </div>
-          <hr>
-          <div class="w3-container watchlist-item" id="meetingtimes">
-            <span class="w3-opacity ticker">
-              <b>MEET</b>
-            </span>
-            <span class="price">$ 12.67</span>
-          </div>
-          <br>
+
         </div>
 
         <!-- End Right Column -->
@@ -125,6 +89,7 @@
   var elevator = document.getElementById('elevator');
   var mmg = document.getElementById('mmg');
   var meetingtimes = document.getElementById('meetingtimes');
+  var other = document.getElementById("other");
 
   leadership.style.cursor = 'pointer';
   resume.style.cursor = 'pointer';
@@ -132,13 +97,14 @@
   elevator.style.cursor = 'pointer';
   mmg.style.cursor = 'pointer';
   meetingtimes.style.cursor = 'pointer';
+  other.style.cursor = 'pointer';
 
   window.onload = function(){
     $('#content').load('ajax/leadership.html');
   }
 
   leadership.onclick = function () {
-    $('#content').load('ajax/leadership.html');
+    $('#right-column').load('leadership.html');
     leadership.classList.add('active');
     resume.classList.remove('active');
     manifesto.classList.remove('active');
@@ -146,6 +112,10 @@
     mmg.classList.remove('active');
     meetingtimes.classList.remove('active');
   }
+  other.onclick = function () {
+    other.classList.add('active');
+  }
+
   resume.onclick = function () {
     $('#content').load('ajax/resume.html');
     leadership.classList.remove('active');

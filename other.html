@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<title>Leadership Portfolio - Brendan Nofs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<div class="w3-third">
+
+  <a href="index.html">
+    <div class="header">
+      <h1 class="w3-text-grey">Nofs Portfolio</h1>
+    </div>
+  </a>
+
+  <div class="w3-container w3-card w3-white">
+    <h2 class="w3-text-grey w3-padding-16">
+      Watchlist</h2>
+
+    <a href="leadership.html">
+      <div class="w3-half w3-center watchlist-item">Leadership</div>
+    </a>
+    <a href="other.html">
+      <div class="w3-half w3-center watchlist-item active">Other</div>
+    </a>
+    <br>
+    <br>
+
+    <div class="w3-container watchlist-item active" id="resume">
+      <span class="w3-opacity ticker">
+        <b>RES</b>
+      </span>
+      <span class="price">$ 40.12</span>
+    </div>
+    <hr>
+
+    <div class="w3-container watchlist-item" id="manifesto">
+      <span class="w3-opacity ticker">
+        <b>MAN</b>
+      </span>
+      <span class="price">$ 31.98</span>
+    </div>
+    <hr>
+
+    <div class="w3-container watchlist-item" id="elevator">
+      <span class="w3-opacity ticker">
+        <b>ELVR</b>
+      </span>
+      <span class="price">$ 60.52</span>
+    </div>
+    <hr>
+    <div class="w3-container watchlist-item" id="mmg">
+      <span class="w3-opacity ticker">
+        <b>MMG</b>
+      </span>
+      <span class="price">$ 47.71</span>
+    </div>
+    <hr>
+    <div class="w3-container watchlist-item" id="meetingtimes">
+      <span class="w3-opacity ticker">
+        <b>MEET</b>
+      </span>
+      <span class="price">$ 12.67</span>
+    </div>
+    <br>
+  </div>
+
+  <!-- End Right Column -->
+</div>
+
+<!-- End Grid -->
+</div>
+<div id="content">
+
+</div>
+
+
+<!-- End Page Container -->
+</div>
+
+
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+  var resume = document.getElementById('resume');
+  var manifesto = document.getElementById('manifesto');
+  var elevator = document.getElementById('elevator');
+  var mmg = document.getElementById('mmg');
+  var meetingtimes = document.getElementById('meetingtimes');
+
+  resume.style.cursor = 'pointer';
+  manifesto.style.cursor = 'pointer';
+  elevator.style.cursor = 'pointer';
+  mmg.style.cursor = 'pointer';
+  meetingtimes.style.cursor = 'pointer';
+
+  window.onload = function () {
+    $('#content').load('intro.html');
+  }
+
+  resume.onclick = function () {
+    $('#content').load('other/resume.html');
+    resume.classList.add('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  manifesto.onclick = function () {
+    $('#content').load('other/manifesto.html');
+    resume.classList.remove('active');
+    manifesto.classList.add('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  elevator.onclick = function () {
+    $('#content').load('other/elevator-image.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.add('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  mmg.onclick = function () {
+    $('#content').load('other/mmg.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.add('active');
+    meetingtimes.classList.remove('active');
+  }
+  meetingtimes.onclick = function () {
+    $('#content').load('other/meeting-times.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.add('active');
+  }
+
+</script>
