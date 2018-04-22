@@ -68,7 +68,10 @@ hr {
     text-align: center;
 }
 
-.chart{
-    position: fixed;
-    right:0;
+iframe{
+    display:block;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #777;
 }
