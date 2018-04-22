@@ -1,43 +1,7 @@
-<div class="w3-container watchlist-item active" id="best">
-    <span class="w3-opacity ticker">
-      <b>BEST</b>
-    </span>
-    <span class="price">$ 12.26</span>
-  </div>
-  <hr>
-
-  <div class="w3-container watchlist-item" id="envision">
-    <span class="w3-opacity ticker">
-      <b>VIS</b>
-    </span>
-    <span class="price">$ 24.38</span>
-  </div>
-  <hr>
-
-  <div class="w3-container watchlist-item" id="pdp">
-    <span class="w3-opacity ticker">
-      <b>PDP</b>
-    </span>
-    <span class="price">$ 14.11</span>
-  </div>
-  <hr>
-  <div class="w3-container watchlist-item" id="values">
-    <span class="w3-opacity ticker">
-      <b>VAL</b>
-    </span>
-    <span class="price">$ 29.03</span>
-  </div>
-  <hr>
-  <div class="w3-container watchlist-item" id="box">
-    <span class="w3-opacity ticker">
-      <b>BOX</b>
-    </span>
-    <span class="price">$ 47.89</span>
-  </div>
-  <br>
-</div>
-
-<script>
+window.onload = function () {
+    $('#right-column').load('leadership-menu.html');
+    $('#content').load('leadership/best.html');
+}
 
 var best = document.getElementById('best');
 var envision = document.getElementById('envision');
@@ -45,12 +9,29 @@ var pdp = document.getElementById('pdp');
 var values = document.getElementById('values');
 var box = document.getElementById('box');
 
+var leadership = document.getElementById('leadership');
+var other = document.getElementById('other');
 
 best.style.cursor = 'pointer';
 envision.style.cursor = 'pointer';
 pdp.style.cursor = 'pointer';
 values.style.cursor = 'pointer';
 box.style.cursor = 'pointer';
+
+leadership.style.cursor = 'pointer';
+other.style.cursor = 'pointer';
+
+other.onclick = function () {
+    $('#right-column').load('other-menu.html');
+    leadership.classList.remove('active');
+    other.classList.add('active');
+}
+
+leadership.onclick = function () {
+    $('#right-column').load('leadership-menu.html');
+    leadership.classList.add('active');
+    other.classList.remove('active');
+}
 
 best.onclick = function () {
     $('#content').load('leadership/best.html');
@@ -93,4 +74,3 @@ box.onclick = function () {
     values.classList.remove('active');
     box.classList.add('active');
 }
-</script>
