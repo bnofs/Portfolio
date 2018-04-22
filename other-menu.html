@@ -1,4 +1,4 @@
-<div class="w3-container watchlist-item active" id="resume">
+<div class="w3-container watchlist-item" id="resume">
     <span class="w3-opacity ticker">
       <b>RES</b>
     </span>
@@ -36,3 +36,59 @@
   </div>
   <br>
 </div>
+
+<script>
+  var resume = document.getElementById('resume');
+  var manifesto = document.getElementById('manifesto');
+  var elevator = document.getElementById('elevator');
+  var mmg = document.getElementById('mmg');
+  var meetingtimes = document.getElementById('meetingtimes');
+
+  resume.style.cursor = 'pointer';
+  manifesto.style.cursor = 'pointer';
+  elevator.style.cursor = 'pointer';
+  mmg.style.cursor = 'pointer';
+  meetingtimes.style.cursor = 'pointer';
+
+  resume.onclick = function () {
+    $('#content').load('other/resume.html');
+    resume.classList.add('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  manifesto.onclick = function () {
+    $('#content').load('other/manifesto.html');
+    resume.classList.remove('active');
+    manifesto.classList.add('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  elevator.onclick = function () {
+    $('#content').load('other/elevator-image.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.add('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.remove('active');
+  }
+  mmg.onclick = function () {
+    $('#content').load('other/mmg.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.add('active');
+    meetingtimes.classList.remove('active');
+  }
+  meetingtimes.onclick = function () {
+    $('#content').load('other/meeting-times.html');
+    resume.classList.remove('active');
+    manifesto.classList.remove('active');
+    elevator.classList.remove('active');
+    mmg.classList.remove('active');
+    meetingtimes.classList.add('active');
+  }
+
+</script>
